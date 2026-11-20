@@ -1,33 +1,28 @@
 # Aashwat Singh
 
-I build backend systems around PostgreSQL, from data models to the policies that decide who can read or change a row. I also build ML pipelines that extract fields from scanned documents and align lyrics to audio. I’m a CS junior at The University of Texas at Dallas, based in Frisco, TX, graduating in May 2028 and seeking a Summer 2027 backend, full-stack, or AI/ML internship.
+I’m a CS junior at UT Dallas (B.S. expected May 2028), based in Frisco, TX. I build PostgreSQL-backed applications and ML pipelines that extract fields from scanned documents and align lyrics to audio. I’m seeking a **Summer 2027 internship in backend engineering, full-stack development, or AI/ML**.
 
-## Featured Work
+## Experience
 
-| Project | What It Solves | Key Engineering Detail / Metric | Stack |
+- **Outamation · AI/Computer Vision Extern** — Built a Python pipeline for mortgage PDFs with Pytest regression coverage. It reached **95% field-extraction accuracy** and cut manual review time by **75%**.
+- **Computing Research Association · AI/ML Research Trainee** — Built OCR pipelines for noisy scans and fine-tuned PyTorch models, reducing character error rate by **18%**.
+
+## Featured Projects
+
+| Project | What It Does | Key Engineering Detail | Stack |
 | --- | --- | --- | --- |
-| [TaxShoeBox](https://github.com/aashwatSingh/TaxShoeBox) | Keeps a freelancer’s expenses and receipts together for Schedule C | Solo build. PostgreSQL calculates yearly totals and enforces per-user access. [Schema and policies](https://github.com/aashwatSingh/TaxShoeBox/blob/main/supabase/schema.sql) | JavaScript, React, Supabase, PostgreSQL |
-| [ProjectForge-Personal](https://github.com/aashwatSingh/ProjectForge-Personal) | Coordinates tasks and membership across engineering teams | I owned tasks, membership, and collaboration. Two concurrent demotions must leave one owner. [Database tests](https://github.com/aashwatSingh/ProjectForge-Personal/blob/main/backend/tests/test_supabase_rls.py) | Python, PostgreSQL, Supabase, React |
-| [Walkthru-HackUTD](https://github.com/aashwatSingh/Walkthru-HackUTD) | Gives students a photo record for housing deposit disputes | Room QR codes route inspections. SHA-256 fingerprints let reviewers check whether the photo bytes changed. | JavaScript, React, PostgreSQL |
-| [songbox](https://github.com/aashwatSingh/songbox) | Turns a song into a karaoke track with timed lyrics | Separates vocals before word alignment and pitch tracking. [Word-timing evaluator](https://github.com/aashwatSingh/songbox/blob/master/services/api/scripts/eval_alignment.py) | Python, PyTorch, PostgreSQL, Pytest |
-| [nle-engine](https://github.com/aashwatSingh/nle-engine) | Previews and exports edits from a video timeline | GPU compositing and audio playback share a timeline. [Export crash investigation](https://github.com/aashwatSingh/nle-engine/blob/master/docs/evidence/2026-08-19-export-access-violation.md) | Rust |
-| [streamforge](https://github.com/aashwatSingh/streamforge) | Helps viewers find and play videos | Ranks a feed by engagement and freshness, then streams the selected video over HLS. | TypeScript, Next.js, Prisma, SQLite |
+| [TaxShoeBox](https://github.com/aashwatSingh/TaxShoeBox) | Organizes expenses and receipts for freelancers filing Schedule C. | Solo build. PostgreSQL enforces per-user row access and calculates yearly totals in one query. | JavaScript, React, Supabase, PostgreSQL |
+| [ProjectForge-Personal](https://github.com/aashwatSingh/ProjectForge-Personal) | Tracks tasks and membership across software teams. | I built the task and membership flows. Project-scoped RLS and a B-tree on `(project_id, user_id)` support role checks. | Python, PostgreSQL, Supabase, React |
+| [Walkthru-HackUTD](https://github.com/aashwatSingh/Walkthru-HackUTD) | Documents move-in and move-out conditions for deposit disputes. | QR codes route students to their room. SHA-256 fingerprints let reviewers detect changes to inspection photos. | JavaScript, React, PostgreSQL, NVIDIA Nemotron |
+| [songbox](https://github.com/aashwatSingh/songbox) | Turns a song into a karaoke track with timed lyrics. | Separates vocals before word alignment and pitch tracking. 55+ automated tests cover the backend. | Python, PyTorch, PostgreSQL, Pytest |
+| [nle-engine](https://github.com/aashwatSingh/nle-engine) | Previews and exports edits from a video timeline. | The timeline drives GPU compositing and audio playback. | Rust |
 
 ## Core Stack
 
 ```text
-Languages    Python, SQL, TypeScript, JavaScript, Rust
-Backend      PostgreSQL, Supabase, Node.js, SQLite
-AI/ML        PyTorch, OpenCV, PyMuPDF, LlamaIndex
+Languages    Python, SQL, TypeScript, JavaScript, Java, C++, Rust
+Backend      PostgreSQL, Supabase, Node.js
 Frontend     React, Next.js
-Tooling      Git, Pytest, PowerShell
+AI/ML        PyTorch, OpenCV, PyMuPDF, LlamaIndex
+Tooling      Pytest, PowerShell
 ```
-
-## Applied ML Experience
-
-At Outamation, my mortgage PDF pipeline reached 95% field-extraction accuracy and cut manual review time by 75%. At the Computing Research Association, I reduced character error rate by 18% on noisy scans.
-
-## Currently Focused On
-
-- Automating repeat setup and validation steps with PowerShell and Python.
-- Tracing a request from PostgreSQL to the model to see where caching can cut LLM spend and response time.
