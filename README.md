@@ -1,29 +1,33 @@
-# Data science & analytics
+# Aashwat Singh
 
-I build projects that connect data, models, and usable applications. My portfolio spans applied audio ML, SQL-backed dashboards, and reproducible simulation. I am interested in data science and analytics opportunities.
+I build backend systems around PostgreSQL, from data models to the policies that decide who can read or change a row. I also build ML pipelines that extract fields from scanned documents and align lyrics to audio. I’m a CS junior at The University of Texas at Dallas, based in Frisco, TX, graduating in May 2028 and seeking a Summer 2027 backend, full-stack, or AI/ML internship.
 
-## Start here
+## Featured Work
 
-| Project | Focus | What to explore |
-| --- | --- | --- |
-| **[SongBox](https://github.com/aashwatSingh/songbox)** | Applied machine learning · Python | Audio separation, transcription, word alignment, and pitch tracking in a FastAPI pipeline. Includes evaluation tooling and documented accuracy limits. |
-| **[Wavepress](https://github.com/aashwatSingh/wavepress)** | Simulation · Revenue analytics | Deterministic streaming data, royalty dashboards, CSV statements, and integer-based revenue allocation. Distribution tests compare simulated market shares with configured weights. |
-| **[TaxShoeBox](https://github.com/aashwatSingh/TaxShoeBox)** | SQL · Dashboard design | PostgreSQL aggregation for yearly financial summaries, indexed search, row-level access controls, and a browser demo with sample data. |
+| Project | What It Solves | Key Engineering Detail / Metric | Stack |
+| --- | --- | --- | --- |
+| [TaxShoeBox](https://github.com/aashwatSingh/TaxShoeBox) | Keeps a freelancer’s expenses and receipts together for Schedule C | Solo build. PostgreSQL calculates yearly totals and enforces per-user access. [Schema and policies](https://github.com/aashwatSingh/TaxShoeBox/blob/main/supabase/schema.sql) | JavaScript, React, Supabase, PostgreSQL |
+| [ProjectForge-Personal](https://github.com/aashwatSingh/ProjectForge-Personal) | Coordinates tasks and membership across engineering teams | I owned tasks, membership, and collaboration. Two concurrent demotions must leave one owner. [Database tests](https://github.com/aashwatSingh/ProjectForge-Personal/blob/main/backend/tests/test_supabase_rls.py) | Python, PostgreSQL, Supabase, React |
+| [Walkthru-HackUTD](https://github.com/aashwatSingh/Walkthru-HackUTD) | Gives students a photo record for housing deposit disputes | Room QR codes route inspections. SHA-256 fingerprints let reviewers check whether the photo bytes changed. | JavaScript, React, PostgreSQL |
+| [songbox](https://github.com/aashwatSingh/songbox) | Turns a song into a karaoke track with timed lyrics | Separates vocals before word alignment and pitch tracking. [Word-timing evaluator](https://github.com/aashwatSingh/songbox/blob/master/services/api/scripts/eval_alignment.py) | Python, PyTorch, PostgreSQL, Pytest |
+| [nle-engine](https://github.com/aashwatSingh/nle-engine) | Previews and exports edits from a video timeline | GPU compositing and audio playback share a timeline. [Export crash investigation](https://github.com/aashwatSingh/nle-engine/blob/master/docs/evidence/2026-08-19-export-access-violation.md) | Rust |
+| [streamforge](https://github.com/aashwatSingh/streamforge) | Helps viewers find and play videos | Ranks a feed by engagement and freshness, then streams the selected video over HLS. | TypeScript, Next.js, Prisma, SQLite |
 
-## Explore the evidence
+## Core Stack
 
-- **ML evaluation:** [SongBox alignment evaluator](https://github.com/aashwatSingh/songbox/blob/master/services/api/scripts/eval_alignment.py) and [status notes](https://github.com/aashwatSingh/songbox/blob/master/docs/STATUS.md). The documented English alignment result is 68.2 ms median error; the 50 ms target remains unmet.
-- **Simulation validation:** [Wavepress distribution tests](https://github.com/aashwatSingh/wavepress/blob/master/tests/streams.test.ts) examine 20,000 track-days. Streams, store delivery, and payouts are simulated.
-- **SQL analytics:** [TaxShoeBox schema](https://github.com/aashwatSingh/TaxShoeBox/blob/main/supabase/schema.sql) includes the `get_tax_summary` function for per-user, per-year totals.
+```text
+Languages    Python, SQL, TypeScript, JavaScript, Rust
+Backend      PostgreSQL, Supabase, Node.js, SQLite
+AI/ML        PyTorch, OpenCV, PyMuPDF, LlamaIndex
+Frontend     React, Next.js
+Tooling      Git, Pytest, PowerShell
+```
 
-## Supporting engineering projects
+## Applied ML Experience
 
-| Project | Technical focus |
-| --- | --- |
-| [Deepwater Nights](https://github.com/aashwatSingh/deepwater-nights) | Seeded simulation, headless game-state tests, and procedural graphics/audio. |
-| [StreamForge](https://github.com/aashwatSingh/streamforge) | Video data modeling, engagement queries, and a feed ranking heuristic based on popularity and freshness. |
-| [NLE Engine](https://github.com/aashwatSingh/nle-engine) | Rust media processing, GPU compositing, timeline editing, and documented performance investigations. |
+At Outamation, my mortgage PDF pipeline reached 95% field-extraction accuracy and cut manual review time by 75%. At the Computing Research Association, I reduced character error rate by 18% on noisy scans.
 
-**Tools used across these projects:** Python · SQL / PostgreSQL · FastAPI · PyTorch-based audio models · TypeScript · React · Prisma · Rust · Docker.
+## Currently Focused On
 
-Each repository links to its implementation, setup instructions, and project-specific limitations.
+- Automating repeat setup and validation steps with PowerShell and Python.
+- Tracing a request from PostgreSQL to the model to see where caching can cut LLM spend and response time.
